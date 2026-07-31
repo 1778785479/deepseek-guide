@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepSeek 完全使用指南 · 官网数据 · 模型排名</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ 导航 ============ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">◆</span>
+      <span>DeepSeek<span class="logo-sub">GUIDE</span></span>
+    </a>
+    <div class="links">
+      <a href="#intro">认识 DeepSeek</a>
+      <a href="#history">发展历程</a>
+      <a href="#guide">怎么用</a>
+      <a href="#links">官方网址</a>
+      <a href="#data">官方数据</a>
+      <a href="#rank">世界排名</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO（实时黑洞） ============ -->
+<header id="top">
+  <canvas id="bhCanvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-tag">REAL-TIME BLACK HOLE · 实时物理渲染</div>
+    <h1>DeepSeek <span class="grad">完全使用指南</span></h1>
+    <p class="hero-sub">从入门到进阶：网页版 · App · API · 本地部署，官方数据与模型排名一网打尽</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="#guide">🚀 开始使用</a>
+      <a class="btn ghost" href="#data">📊 官方数据</a>
+    </div>
+    <div class="hero-meta">
+      <span>◆ 免费开源 · MIT 协议</span>
+      <span>◆ 1M 超长上下文</span>
+      <span>◆ 世界前三梯队</span>
+    </div>
+  </div>
+  <!-- 真实感行星装饰 -->
+  <div class="planet hero-left" data-kind="saturn" style="--size:150px; --spin:36s; left:5%; top:56%"></div>
+  <div class="planet hero-right" data-kind="jupiter" style="--size:190px; --spin:48s; right:4%; top:14%"></div>
+  <div class="scroll-cue">▾ 向下滚动</div>
+</header>
+
+<main>
+  <!-- ============ 认识 DeepSeek ============ -->
+  <section id="intro" class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">ABOUT</span>
+        <h2>认识 <span class="grad">DeepSeek</span></h2>
+        <p class="sec-sub">DeepSeek（深度求索）成立于 2023 年，由幻方量化创始人梁文锋创立，总部杭州。以「开源 + 极致成本 + 顶级性能」三张王牌，两年半内从默默无闻冲到世界第一梯队。</p>
+      </div>
+      <div class="grid4">
+        <div class="feat">
+          <div class="f-icon">🧊</div>
+          <h3>100% 开源</h3>
+          <p>全部模型权重 MIT 协议免费商用，论文 + 技术报告 + 权重三件套全透明。</p>
+        </div>
+        <div class="feat">
+          <div class="f-icon">⚡</div>
+          <h3>极致成本</h3>
+          <p>V3 训练仅 557 万美元（同行 1/10）；API 价格常年是头部闭源模型的几分之一。</p>
+        </div>
+        <div class="feat">
+          <div class="f-icon">🏆</div>
+          <h3>顶级性能</h3>
+          <p>V3.2-Speciale 全面超越 GPT-5、IMO/IOI 双金牌；V4-Pro 预览开源类 #5，正式版剑指世界前三。</p>
+        </div>
+        <div class="feat">
+          <div class="f-icon">📜</div>
+          <h3>1M 长上下文</h3>
+          <p>V4 家族默认 1M token 上下文（DSA 稀疏注意力），一次读完几十本书不是问题。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 发展历程 ============ -->
+  <section id="history" class="sec alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">TIMELINE</span>
+        <h2>发展 <span class="grad">历程</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="tl"><div class="tl-dot"></div><div class="tl-yr">2023.11</div><div class="tl-nm">DeepSeek Coder</div><div class="tl-ds">33B 开源代码模型</div></div>
+        <div class="tl"><div class="tl-dot"></div><div class="tl-yr">2024.05</div><div class="tl-nm">V2 · MoE</div><div class="tl-ds">价格屠夫登场</div></div>
+        <div class="tl hot"><div class="tl-dot"></div><div class="tl-yr">2024.12</div><div class="tl-nm">V3</div><div class="tl-ds">557 万美元训出旗舰</div></div>
+        <div class="tl hot"><div class="tl-dot"></div><div class="tl-yr">2025.01</div><div class="tl-nm">R1</div><div class="tl-ds">推理对标 o1 · 全球震荡</div></div>
+        <div class="tl"><div class="tl-dot"></div><div class="tl-yr">2025.12</div><div class="tl-nm">V3.2-Speciale</div><div class="tl-ds">超 GPT-5 · 双金牌</div></div>
+        <div class="tl hot"><div class="tl-dot"></div><div class="tl-yr">2026.04</div><div class="tl-nm">V4 预览</div><div class="tl-ds">双旗舰 · 1M 上下文</div></div>
+        <div class="tl hot"><div class="tl-dot"></div><div class="tl-yr">2026.07</div><div class="tl-nm">V4-Flash 正式版</div><div class="tl-ds">AA 50 分 · 轻量反超旗舰</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 怎么用 ============ -->
+  <section id="guide" class="sec">
+    <div class="planet" data-kind="earth" style="--size:120px; --spin:26s; right:2%; top:30%"></div>
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">HOW TO USE</span>
+        <h2>怎么用 <span class="grad">DeepSeek</span>？四种方式</h2>
+        <p class="sec-sub">网页免费聊、App 随身用、API 接程序、开源权重自己部署 —— 总有一种适合你</p>
+      </div>
+
+      <div class="method-grid">
+        <!-- 1 网页版 -->
+        <article class="method">
+          <div class="m-head"><span class="m-num">01</span><div><h3>网页版 Chat</h3><p class="m-en">chat.deepseek.com · 免费</p></div></div>
+          <ol class="steps">
+            <li>浏览器打开 <b>chat.deepseek.com</b>，手机号或邮箱注册登录</li>
+            <li>默认使用 DeepSeek-V4 系列，免费无限对话</li>
+            <li>需要深度推理时点击「<b>深度思考</b>」切换 R1 推理模式</li>
+            <li>点击「<b>联网搜索</b>」图标可获取实时信息（手动开启）</li>
+            <li>支持上传文件：图片 / PDF / Word / Excel / PPT，可解析长文档</li>
+            <li>V4 支持 <b>1M 超长上下文</b>，可直接「读」整本书</li>
+          </ol>
+          <a class="btn small" href="https://chat.deepseek.com" target="_blank" rel="noopener">打开网页版 ↗</a>
+        </article>
+
+        <!-- 2 App -->
+        <article class="method">
+          <div class="m-head"><span class="m-num">02</span><div><h3>手机 App</h3><p class="m-en">iOS / Android · 免费</p></div></div>
+          <ol class="steps">
+            <li>App Store 或各大安卓应用商店搜索「<b>DeepSeek</b>」</li>
+            <li>下载安装后登录（与网页版账号通用）</li>
+            <li>支持<b>语音输入</b>，说话即问即答</li>
+            <li>支持联网搜索、文件上传、长上下文对话</li>
+            <li>对话记录云端同步，网页与 App 无缝衔接</li>
+            <li>无订阅费、无次数限制 —— 真正免费</li>
+          </ol>
+          <a class="btn small" href="https://www.deepseek.com" target="_blank" rel="noopener">前往官网下载 ↗</a>
+        </article>
+
+        <!-- 3 API -->
+        <article class="method wide">
+          <div class="m-head"><span class="m-num">03</span><div><h3>API 接入（开发者）</h3><p class="m-en">platform.deepseek.com · 兼容 OpenAI SDK · 按量计费</p></div></div>
+          <div class="api-cols">
+            <ol class="steps">
+              <li>前往 <b>platform.deepseek.com</b> 注册并登录</li>
+              <li>在「API Keys」页面创建密钥 <b>sk-...</b>，妥善保存</li>
+              <li>账户<b>充值</b>（支持支付宝，新用户有赠送额度）</li>
+              <li>接口地址：<code>https://api.deepseek.com</code>（与 OpenAI 格式兼容）</li>
+              <li>模型名：<code>deepseek-v4-flash</code>（轻量） / <code>deepseek-v4-pro</code>（旗舰）</li>
+              <li>历史模型名 <code>deepseek-chat</code> / <code>deepseek-reasoner</code> 已于 2026-07-24 退役</li>
+            </ol>
+            <div class="code-block">
+              <div class="code-tabs"><span class="active">Python</span><span>cURL</span></div>
+              <pre><code><span class="cmt"># pip install openai</span>
+<span class="k">from</span> openai <span class="k">import</span> OpenAI
+
+client = OpenAI(
+    api_key=<span class="s">"sk-你的密钥"</span>,
+    base_url=<span class="s">"https://api.deepseek.com"</span>,
+)
+resp = client.chat.completions.create(
+    model=<span class="s">"deepseek-v4-flash"</span>,   <span class="cmt"># 或 deepseek-v4-pro</span>
+    messages=[
+        {<span class="s">"role"</span>: <span class="s">"user"</span>,
+         <span class="s">"content"</span>: <span class="s">"你好，介绍一下你自己"</span>}
+    ],
+    stream=<span class="k">True</span>,
+)
+<span class="k">for</span> chunk <span class="k">in</span> resp:
+    <span class="k">print</span>(chunk.choices[0].delta.content, end=<span class="s">""</span>)</code></pre>
+              <pre class="curl" hidden><code>curl https://api.deepseek.com/chat/completions \
+  -H <span class="s">"Content-Type: application/json"</span> \
+  -H <span class="s">"Authorization: Bearer sk-你的密钥"</span> \
+  -d <span class="s">'{
+    "model": "deepseek-v4-flash",
+    "messages": [{"role":"user","content":"你好"}],
+    "stream": true
+  }'</span></code></pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 本地部署 -->
+        <article class="method">
+          <div class="m-head"><span class="m-num">04</span><div><h3>开源权重 / 本地部署</h3><p class="m-en">HuggingFace · MIT 协议</p></div></div>
+          <ol class="steps">
+            <li>HuggingFace 官方组织 <b>deepseek-ai</b> 下载模型权重</li>
+            <li>支持 <b>vLLM / SGLang</b> 等推理框架部署（GPU 服务器）</li>
+            <li>消费级显卡可跑<b>蒸馏小模型</b>（如 7B/14B）</li>
+            <li>可用于<b>微调、商用、二次开发</b>，MIT 协议无限制</li>
+            <li>配合 <b>Claude Code / OpenClaw / OpenCode</b> 等工具集成智能体</li>
+          </ol>
+          <a class="btn small" href="https://huggingface.co/deepseek-ai" target="_blank" rel="noopener">HuggingFace 权重 ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 官方数据网址 ============ -->
+  <section id="links" class="sec alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">OFFICIAL LINKS</span>
+        <h2>官方数据 <span class="grad">网址大全</span></h2>
+        <p class="sec-sub">全部为 DeepSeek 官方渠道，数据与公告以此为准</p>
+      </div>
+      <div class="link-grid">
+        <a class="link-card" href="https://www.deepseek.com" target="_blank" rel="noopener">
+          <span class="lk-icon">🌐</span><div><h3>官方网站</h3><p>deepseek.com</p><span class="lk-d">公司介绍 · 模型发布 · App 下载</span></div><span class="lk-arrow">↗</span>
+        </a>
+        <a class="link-card" href="https://chat.deepseek.com" target="_blank" rel="noopener">
+          <span class="lk-icon">💬</span><div><h3>网页版 Chat</h3><p>chat.deepseek.com</p><span class="lk-d">免费在线对话 · 联网搜索 · 文件上传</span></div><span class="lk-arrow">↗</span>
+        </a>
+        <a class="link-card" href="https://platform.deepseek.com" target="_blank" rel="noopener">
+          <span class="lk-icon">🔑</span><div><h3>API 开放平台</h3><p>platform.deepseek.com</p><span class="lk-d">注册 · API Key · 充值 · 用量统计</span></div><span class="lk-arrow">↗</span>
+        </a>
+        <a class="link-card" href="https://api-docs.deepseek.com" target="_blank" rel="noopener">
+          <span class="lk-icon">📘</span><div><h3>API 文档</h3><p>api-docs.deepseek.com</p><span class="lk-d">接口规范 · 模型列表 · 代码示例</span></div><span class="lk-arrow">↗</span>
+        </a>
+        <a class="link-card" href="https://api-docs.deepseek.com/updates" target="_blank" rel="noopener">
+          <span class="lk-icon">📣</span><div><h3>官方更新日志</h3><p>api-docs.deepseek.com/updates</p><span class="lk-d">全部版本变更 · 模型上线/退役记录</span></div><span class="lk-arrow">↗</span>
+        </a>
+        <a class="link-card" href="https://api-docs.deepseek.com/news" target="_blank" rel="noopener">
+          <span class="lk-icon">📰</span><div><h3>官方新闻</h3><p>api-docs.deepseek.com/news</p><span class="lk-d">模型发布公告（V4 等一手消息）</span></div><span class="lk-arrow">↗</span>
+        </a>
+        <a class="link-card" href="https://github.com/deepseek-ai" target="_blank" rel="noopener">
+          <span class="lk-icon">🐙</span><div><h3>GitHub</h3><p>github.com/deepseek-ai</p><span class="lk-d">开源代码 · 技术报告 · 训练细节</span></div><span class="lk-arrow">↗</span>
+        </a>
+        <a class="link-card" href="https://huggingface.co/deepseek-ai" target="_blank" rel="noopener">
+          <span class="lk-icon">🤗</span><div><h3>HuggingFace</h3><p>huggingface.co/deepseek-ai</p><span class="lk-d">全部模型权重下载（MIT 开源）</span></div><span class="lk-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 官方数据内容 ============ -->
+  <section id="data" class="sec">
+    <div class="planet" data-kind="mars" style="--size:110px; --spin:30s; left:2%; bottom:8%"></div>
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">OFFICIAL DATA</span>
+        <h2>官方数据 <span class="grad">具体内容</span></h2>
+        <p class="sec-sub">模型参数、基准分数与价格 —— 摘自官方模型卡 / API Docs / Artificial Analysis</p>
+      </div>
+
+      <h3 class="table-title">📦 模型参数一览</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>模型</th><th>状态</th><th>总参数</th><th>激活参数</th><th>上下文</th><th>AA 智能指数</th><th>API 价格 (入/出 $/M)</th></tr></thead>
+          <tbody>
+            <tr class="hot-row"><td><b>V4-Pro</b></td><td>预览 · 正式版即将推出</td><td>1.6T</td><td>49B</td><td>1M</td><td>44 · 开源 #5</td><td>0.435 / 0.87</td></tr>
+            <tr class="hot-row"><td><b>V4-Flash-0731</b></td><td>正式版</td><td>304B</td><td>13B</td><td>1M</td><td>50 · 低价档 #2</td><td>见官方定价页</td></tr>
+            <tr><td>V3.2 / V3.2-Speciale</td><td>2025.12 发布</td><td>685B</td><td>37B</td><td>128K</td><td>Speciale 超 GPT-5</td><td>低价档</td></tr>
+            <tr><td>R1 / R1-0528</td><td>2025.01 / 05</td><td>671B</td><td>37B</td><td>128K</td><td>推理对标 o1</td><td>低价档</td></tr>
+            <tr><td>V3</td><td>2024.12</td><td>671B</td><td>37B</td><td>128K</td><td>低成本奇迹</td><td>低价档</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="table-title">📈 基准测试分数（官方 eval-results）</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>基准</th><th>V3.2</th><th>V4-Flash-0731</th><th>对照</th></tr></thead>
+          <tbody>
+            <tr><td>AIME 2026（数学竞赛）</td><td><b>94.17</b></td><td>—</td><td>顶级水平</td></tr>
+            <tr><td>GPQA Diamond（科学）</td><td><b>82.4</b></td><td>—</td><td>研究生级</td></tr>
+            <tr><td>MMLU-Pro（综合知识）</td><td><b>85</b></td><td>—</td><td>顶级水平</td></tr>
+            <tr><td>SWE-bench Verified（软件工程）</td><td><b>70</b></td><td>—</td><td>业界领先</td></tr>
+            <tr><td>Terminal Bench 2.1（终端代理）</td><td>—</td><td><b>82.7</b></td><td>GLM-5.2: 81.0 · Opus-4.8: 85.0</td></tr>
+            <tr><td>Cybergym（安全代理）</td><td>—</td><td><b>76.7</b></td><td>—</td></tr>
+            <tr><td>Toolathlon（工具调用）</td><td>—</td><td><b>70.3</b></td><td>—</td></tr>
+            <tr><td>DeepSWE（深度软件工程）</td><td>—</td><td><b>54.4</b></td><td>—</td></tr>
+            <tr><td>NL2Repo（代码生成）</td><td>—</td><td><b>54.2</b></td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">* V4-Flash-0731 在 9 项 Agent 基准上全部超越 V4-Pro 预览版；数据来源：DeepSeek 官方模型卡（HuggingFace）。</p>
+    </div>
+  </section>
+
+  <!-- ============ 世界排名 ============ -->
+  <section id="rank" class="sec alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">RANKING</span>
+        <h2>V4-Pro 正式版 <span class="grad">世界第几？</span></h2>
+      </div>
+      <div class="steps">
+        <div class="step a"><div class="pill"><span class="pnum">预览版</span>44</div><div class="t">V4-Pro Preview</div><div class="d">AA 智能指数 · 开源大模型 #5</div></div>
+        <div class="step-arrow">➜</div>
+        <div class="step b"><div class="pill"><span class="pnum">正式版</span>50</div><div class="t">V4-Flash-0731</div><div class="d">仅重训练 +10 分 · 反超预览</div></div>
+        <div class="step-arrow">➜</div>
+        <div class="step c"><div class="pill"><span class="pnum">预测</span>50+</div><div class="t">V4-Pro 正式版</div><div class="d">重新优化后预计 +10 分左右</div></div>
+      </div>
+      <div class="verdict">预测：<span class="grad">世界前三，冲击第一梯队</span> ⭐</div>
+      <div class="rivals">
+        <div class="rival"><div class="r1">Claude Opus 5</div><div class="r2">2026.07 新 leader</div></div>
+        <div class="rival"><div class="r1">Gemini 3.x Pro</div><div class="r2">世界知识第一梯队</div></div>
+        <div class="rival"><div class="r1">Kimi K3</div><div class="r2">国产劲敌</div></div>
+        <div class="rival"><div class="r1">Fable 5</div><div class="r2">AA-Briefcase 领跑</div></div>
+      </div>
+      <p class="rank-note">依据：预览版已 44 分；Flash 靠重训练 +10 分；官方承诺正式版重新优化。LMArena 暂未核验，推断前 3–5。排名为观点，以官方发布为准。</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="sec">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">FAQ</span>
+        <h2>常见 <span class="grad">问题</span></h2>
+      </div>
+      <div class="faq-list">
+        <details open><summary>DeepSeek 收费吗？</summary><p>网页版与手机 App 完全免费（无次数限制）；API 按 token 计费，价格远低于头部闭源模型，新用户有赠送额度。</p></details>
+        <details><summary>需要「科学上网」吗？</summary><p>不需要。DeepSeek 是国产模型，官方网页/App/API 在国内可直接访问。</p></details>
+        <details><summary>API 与 OpenAI 兼容吗？</summary><p>兼容。使用 OpenAI SDK 只需把 <code>base_url</code> 改为 <code>https://api.deepseek.com</code> 即可，模型名换成 <code>deepseek-v4-flash</code> / <code>deepseek-v4-pro</code>。</p></details>
+        <details><summary>V4-Pro 正式版什么时候发布？</summary><p>官方更新日志明确「The official release of DeepSeek-V4-Pro will follow soon」——即将推出，预计 2026 年内。</p></details>
+        <details><summary>Flash 和 Pro 怎么选？</summary><p>日常对话、简单 Agent、批量任务用 <b>V4-Flash</b>（快、便宜，AA 50 分）；复杂推理、长文写作、硬核代码用 <b>V4-Pro</b>（更稳更强）。</p></details>
+        <details><summary>支持联网搜索吗？</summary><p>网页版/App 需手动点击「联网搜索」图标开启；API 侧按官方文档传参。</p></details>
+        <details><summary>上传文件支持哪些格式？</summary><p>图片、PDF、Word、Excel、PPT、TXT 等均可上传解析；V4 的 1M 上下文可一次性处理超长文档。</p></details>
+        <details><summary>我的数据安全吗？</summary><p>官方提供隐私政策与数据使用说明；敏感数据建议走 API 并开启数据隔离选项（详见官方文档）。</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer>
+  <div class="container">
+    <div class="f-brand">◆ DeepSeek GUIDE</div>
+    <p>本页面为使用指南与信息汇总，非官方站点。数据来源：DeepSeek 官方 API Docs / HuggingFace / Artificial Analysis（截至 2026-07）。</p>
+    <p class="f-tech">背景黑洞为 <b>Schwarzschild 光线追踪实时渲染</b>（WebGL · 引力透镜 · 多普勒吸积盘）；行星为程序化 fbm 纹理实时生成。</p>
+  </div>
+</footer>
+
+<script src="js/blackhole.js"></script>
+<script src="js/planets.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
