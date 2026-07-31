@@ -235,17 +235,55 @@ footer p{font-size:12px;color:rgba(230,233,255,.45);line-height:1.9;max-width:82
 .reveal.in{opacity:1;transform:translateY(0)}
 
 /* ============ 响应式 ============ */
+.nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:24px;cursor:pointer;padding:6px 10px;line-height:1}
 @media (max-width:1020px){
   .grid4{grid-template-columns:repeat(2,1fr)}
   .link-grid{grid-template-columns:repeat(2,1fr)}
 }
+@media (max-width:820px){
+  .nav-toggle{display:block}
+  .nav-inner{flex-wrap:wrap}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+    background:rgba(6,8,20,.97);border-bottom:1px solid var(--line);padding:6px 0 10px;
+    box-shadow:0 24px 40px rgba(2,6,23,.7)}
+  .links.open{display:flex}
+  .links a{padding:13px 26px;font-size:15px;border-bottom:1px solid rgba(255,255,255,.05)}
+  .links a:last-child{border-bottom:none}
+  .links a::after{display:none}
+}
 @media (max-width:760px){
-  .links{display:none}
-  #top{height:74vh}
+  #top{height:78vh;min-height:0}
+  #bhCanvas{height:100%}
+  .hero-content{padding:0 18px}
+  .hero-tag{font-size:10px;letter-spacing:2px;padding:6px 14px;margin-bottom:16px}
+  #top h1{font-size:clamp(30px,9.4vw,44px)}
+  .hero-sub{font-size:14.5px;margin-top:14px}
+  .hero-cta{margin-top:26px;gap:12px}
+  .btn{padding:13px 26px;font-size:14px;min-height:46px;display:inline-flex;align-items:center;justify-content:center}
+  .hero-meta{gap:14px;margin-top:22px;flex-wrap:wrap}
+  .hero-meta span{font-size:11.5px}
+  .scroll-cue{display:none}
   .grid4,.method-grid,.api-cols{grid-template-columns:1fr}
-  .link-grid{grid-template-columns:1fr 1fr}
+  .link-grid{grid-template-columns:1fr}
   .step-arrow{display:none}
-  .sec{padding:64px 0}
-  .hero-left{display:none}
-  .planet{opacity:.9}
+  .sec{padding:56px 0}
+  .sec-head{margin-bottom:34px}
+  .container{padding:0 16px}
+  .sec-sub{font-size:14px;line-height:1.8}
+  .feat{padding:22px 20px}
+  .method{padding:20px 18px}
+  .steps li{font-size:13.5px;padding-left:32px}
+  .code-block pre{font-size:11.5px;padding:14px}
+  .link-card{padding:16px}
+  .timeline{margin-top:26px}
+  .tl{min-width:118px}
+  .table-title{font-size:15px}
+  .steps{gap:18px}
+  .step{width:160px}
+  .step .pill{font-size:24px}
+  .verdict{margin-top:28px}
+  .planet{opacity:.85}
+  .hero-left,.hero-right{display:none}
+  #pager,details summary{min-height:44px}
+  .faq-list details summary{font-size:14.5px;padding:15px 40px 15px 18px}
 }
