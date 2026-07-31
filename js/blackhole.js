@@ -178,7 +178,9 @@
 
   function resize() {
     var w = canvas.clientWidth, h = canvas.clientHeight;
-    var dpr = Math.min(window.devicePixelRatio || 1, 1.25);
+    // 移动端 DPR 上限 1（手机屏 DPR 常为 2-3，过高会拖垮 GPU）；桌面 1.25
+    var isMobile = Math.min(window.innerWidth, window.innerHeight) < 768;
+    var dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.25);
     canvas.width = Math.max(1, Math.floor(w * dpr));
     canvas.height = Math.max(1, Math.floor(h * dpr));
     gl.viewport(0, 0, canvas.width, canvas.height);
