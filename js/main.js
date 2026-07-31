@@ -29,6 +29,29 @@
     revealEls.forEach(function (el) { el.classList.add("in"); });
   }
 
+  /* 移动端汉堡菜单 */
+  var toggle = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks");
+  if (toggle && links) {
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    links.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+    document.addEventListener("click", function (e) {
+      if (!links.contains(e.target) && !toggle.contains(e.target)) {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   /* 代码 Tab 切换 */
   var tabs = document.querySelectorAll(".code-tabs span");
   tabs.forEach(function (tab, idx) {
